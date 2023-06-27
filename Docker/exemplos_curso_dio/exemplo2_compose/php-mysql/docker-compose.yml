@@ -1,0 +1,41 @@
+version: "3.7"
+
+services:
+  web:
+    image: webdevops/php-apache:alpine-php7
+    ports:
+      - "4500:80"
+    volumes:
+      - C:/Users/igora/Documents/Material Faculdade/DockerFundamentos/exemplo2_compose/php:/app
+
+    networks:
+      - minha-rede
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "Senha123"
+      MYSQL_DATABASE: "testedb"
+    ports:
+      - "3306:3306"
+    volumes:
+      - C:/Users/igora/Documents/Material Faculdade/DockerFundamentos/exemplo1_compose/mysql-C:/var/lib/mysql
+
+    networks:
+      - minha-rede
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      MYSQL_ROOT_PASSWORD: "Senha123"
+    ports:
+      - "8080:80"
+    volumes:
+      - C:/Users/igora/Documents/Material Faculdade/DockerFundamentos/exemplo2_compose/php/admin/uploads.ini:/usr/local/etc/php/conf.d/php-phpmyadmin.ini
+
+    networks:
+      - minha-rede
+
+networks:
+   minha-rede:
+     driver: bridge
