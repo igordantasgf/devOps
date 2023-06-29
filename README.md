@@ -1,6 +1,6 @@
 # DevOps
 Trabalhos, Cursos e Projetos na área de Dev Ops
-Autor: Igor Dantas Gomes Franca
+</p> Autor: Igor Dantas Gomes Franca
 
 ---
 
