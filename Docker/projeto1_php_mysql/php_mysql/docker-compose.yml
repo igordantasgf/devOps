@@ -1,3 +1,5 @@
+
+
 version: "3.7"
 
 services:
@@ -6,7 +8,7 @@ services:
     ports:
       - "4500:80"
     volumes:
-      - C:/Users/igora/Documents/Material Faculdade/devOps/Docker/exemplos_curso_dio/exemplo2_compose/php:/app
+      - C:/Users/igora/Documents/Material Faculdade/devOps/Docker/projeto1_php_mysql/php/:/app
 
     networks:
       - minha-rede
@@ -19,7 +21,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - C:/Users/igora/Documents/Material Faculdade/devOps/Docker/exemplos_curso_dio/exemplo1_compose/mysql-C:/var/lib/mysql
+      - C:/Users/igora/Documents/Material Faculdade/devOps/Docker/projeto1_php_mysql/mysql-C:/var/lib/mysql
 
     networks:
       - minha-rede
@@ -31,7 +33,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - C:/Users/igora/Documents/Material Faculdade/devOps/Docker/exemplos_curso_dio/exemplo2_compose/php/admin/uploads.ini:/usr/local/etc/php/conf.d/php-phpmyadmin.ini
+      - C:/Users/igora/Documents/Material Faculdade/devOps/Docker/projeto1_php_mysql/php/admin/uploads.ini:/usr/local/etc/php/conf.d/php-phpmyadmin.ini
 
     networks:
       - minha-rede
